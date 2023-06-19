@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
          /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
+         
          modalElem.classList.add('active');
          overlay.classList.add('active');
       }); // end click
