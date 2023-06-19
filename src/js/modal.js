@@ -15,16 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
       /* Назначаем каждой кнопке обработчик клика */
       item.addEventListener('click', function(e) {
-
+        
          /* Предотвращаем стандартное действие элемента. Так как кнопку разные
             люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
             Нужно подстраховаться. */
          e.preventDefault();
+         
 
          /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
             и будем искать модальное окно с таким же атрибутом. */
          var modalId = this.getAttribute('data-modal'),
              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+      //   this.classList.remove('active');
 
 
          /* После того как нашли нужное модальное окно, добавим классы
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     overlay.addEventListener('click', function() {
         document.querySelector('.modal.active').classList.remove('active');
-        this.classList.remove('active');
+      //   this.classList.remove('active');
     });
 
 }); // end ready
